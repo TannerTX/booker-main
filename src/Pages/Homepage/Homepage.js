@@ -11,18 +11,13 @@ function Homepage() {
         navigate(newPath)
     }
 
-    const doSomething = () => {
-        console.log("SUP")
-    }
-
-    const [words, setWords] = useState("")
-
     return (
         <div className="MainContainer">
         <img id="Welcome_Load" src={mainLogo} />
-        <button className="btn" onClick={() => routeChange("/Reserve")}>SHOP</button>
-        {/* <CoolButton words="Welcome2" /> */}
-        <p>{words ? words : "NONE"}</p>
+        <button className="btn" onClick={() => routeChange("/Reserve")}>Schedule a Trip</button>
+        <button className="btn" onClick={() => routeChange("/Active")}>View Current Reservations</button>
+        <button className="btn" onClick={() => routeChange("/Gabe")}>Picture of Gabe</button>
+        <footer><i><a href="https://github.com/TannerTX">@TannerTX</a></i></footer>
         </div>
     )
 

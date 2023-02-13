@@ -6,6 +6,7 @@ import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
 import { BrowserRouter, Routes, Route, Router} from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage.js"
 import ReservePage from "./Pages/ReservePage/ReservePage.js"
+import Gabe from "./Pages/Gabe/Gabe.js"
 // import app_connection from './firebase'; 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Routes>
         <Route index element={<Homepage />} />
         <Route path="/Reserve" element={<ReservePage />} />
+        <Route path="/Gabe" element={<Gabe />} />
       </Routes>
     </BrowserRouter>
     
