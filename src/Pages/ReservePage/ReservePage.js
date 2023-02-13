@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "../ReservePage/ReservePage.css"
 import "../../Components/CoolButton/CoolButton.css"
 import schedule from "../../Images/Schedule.png"
 import { useNavigate } from "react-router-dom"
 import app_connection from "../../firebase.js"
 import { collection, getFirestore, addDoc} from 'firebase/firestore';
-
+import LoadingPage from "../LoadingPage/LoadingPage.js"
 
 
 function ReservePage() {
@@ -21,6 +21,14 @@ function ReservePage() {
     const [guests, setGuests] = useState("")
     const [errors, setErrors] = useState("")
     const [success, setSuccess] = useState("")
+    const [isLoading, setIsLoading] = useState(true)
+
+
+    
+    useEffect(() => {
+        setTimeout(() => {setIsLoading(false)}, 2000)
+    }, [])
+    
 
     const handleSubmit = async () => {
         console.log(`${dest}\n${arrival}\n${guests}`)
@@ -29,7 +37,8 @@ function ReservePage() {
             Destination: dest,
             Guests: guests,
         }
-        
+        setIsLoading(true)
+        alert("Successfully Submitted Reservation!")
         const docRef = await addDoc(collection(db, "Bookings"), data)
 
         setTimeout(() => routeChange("/"), 2000)        
@@ -47,7 +56,11 @@ function ReservePage() {
         
     }
 
+    if(isLoading)
+    return <LoadingPage />
+    else
     return (
+        
         <div className="Main">
         <img id="Welcome_Load2" src={schedule} />
         <button className="btn" id="homebtn" onClick={() => routeChange("/")}>Home</button>
@@ -100,6 +113,8 @@ function ReservePage() {
 </div>
 
         </div>
+
+    
     )
 
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import "../../Components/CoolButton/CoolButton.css"
 import ga from "../../Images/Gabe.jpg"
 import "./Gabe.css"
+import LoadingPage from "../LoadingPage/LoadingPage.js"
 
 function Gabe() {
 
@@ -12,6 +13,14 @@ function Gabe() {
         navigate(newPath)
     }
 
+    const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false) ,2000)
+    }, [])
+
+    if(isLoading)
+    return <LoadingPage />
+    else
     return (
         <>
         <img id="Gabe" src={ga} />

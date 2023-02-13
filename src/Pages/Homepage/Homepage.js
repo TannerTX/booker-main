@@ -3,6 +3,7 @@ import "./Homepage.css"
 import mainLogo from "../../Images/MainLogo.png"
 import { useNavigate } from "react-router-dom"
 import "../../Components/CoolButton/CoolButton.css"
+import LoadingPage from "../LoadingPage/LoadingPage.js"
 
 function Homepage() {
 
@@ -12,6 +13,7 @@ function Homepage() {
     }
 
     return (
+
         <div className="MainContainer">
         <img id="Welcome_Load" src={mainLogo} />
         <button className="btn" onClick={() => routeChange("/Reserve")}>Schedule a Trip</button>

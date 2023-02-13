@@ -1,0 +1,15 @@
+.grad{
+    color: red
+}
+
+.MainLoading{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(156, 147, 147);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
