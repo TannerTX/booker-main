@@ -39,7 +39,7 @@ function ReservePage() {
         }
         setIsLoading(true)
         alert("Successfully Submitted Reservation!")
-        const docRef = await addDoc(collection(db, "Bookings"), data)
+        await addDoc(collection(db, "Bookings"), data)
 
         setTimeout(() => routeChange("/"), 2000)        
     }
@@ -62,7 +62,7 @@ function ReservePage() {
     return (
         
         <div className="Main">
-        <img id="Welcome_Load2" src={schedule} />
+        <img alt="h" id="Welcome_Load2" src={schedule} />
         <button className="btn" id="homebtn" onClick={() => routeChange("/")}>Home</button>
         <div className="login-card">
         <div className="card-header" >

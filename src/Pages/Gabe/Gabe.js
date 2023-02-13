@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import mainLogo from "../../Images/MainLogo.png"
 import { useNavigate } from "react-router-dom"
 import "../../Components/CoolButton/CoolButton.css"
 import ga from "../../Images/Gabe.jpg"
@@ -23,7 +22,7 @@ function Gabe() {
     else
     return (
         <>
-        <img id="Gabe" src={ga} />
+        <img alt="Gabe" id="Gabe" src={ga} />
         <button id="backbtn" className="btn" onClick={() => routeChange("/")}>←</button>
         </>
     )
