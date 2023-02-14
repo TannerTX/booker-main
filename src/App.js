@@ -5,6 +5,7 @@ import Homepage from "./Pages/Homepage/Homepage.js"
 import ReservePage from "./Pages/ReservePage/ReservePage.js"
 import Gabe from "./Pages/Gabe/Gabe.js"
 import LoadingPage from './Pages/LoadingPage/LoadingPage.js';
+import History from "./Pages/History/History.js"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route index element={<Homepage />} />
         <Route path="/Reserve" element={<ReservePage />} />
         <Route path="/Gabe" element={<Gabe />} />
+        <Route path="/History" element={<History />} />
       </Routes>
     </BrowserRouter>
     

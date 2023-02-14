@@ -16,7 +16,7 @@ function Homepage() {
         <div className="MainContainer">
         <img alt="h" id="Welcome_Load" src={mainLogo} />
         <button className="btn" onClick={() => routeChange("/Reserve")}>Schedule a Trip</button>
-        <button className="btn" onClick={() => routeChange("/Active")}>View Current Reservations</button>
+        <button className="btn" onClick={() => routeChange("/History")}>View Current Reservations</button>
         <button className="btn" onClick={() => routeChange("/Gabe")}>Picture of Gabe</button>
         <footer><i><a href="https://github.com/TannerTX">@TannerTX</a></i></footer>
         </div>
