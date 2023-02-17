@@ -6,6 +6,8 @@ import LoadingPage from "../LoadingPage/LoadingPage.js";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import app_connection from "../../firebase.js"
 import { useNavigate } from "react-router-dom";
+import Navbar from '../../Components/Navbar/Navbar.js';
+
 
 export default function History() {
 
@@ -19,7 +21,7 @@ export default function History() {
         navigate(newPath)
     }
     
-
+    
     useEffect(() => {
         const fetchData = async () => {
           const reservationRef = collection(db, 'Bookings');
@@ -37,17 +39,18 @@ export default function History() {
     <LoadingPage />
     else
     return (
+        
         <div className="Main">
         <button id="homeb" className="btn" onClick={() => routeChange("/")}></button>
         {reservations.map(item => 
             <div className="card">
             <h3>
 
-                {item.DateOfArrival}
+                {item.DateOfArrival || "Empty"} 
                  <br /> <br />
-                {item.Destination}
+                {item.Destination || "Empty"}
                  <br /> <br />
-                {item.Guests}
+                {item.Guests || "Empty"}
             </h3>     
             </div>
             )

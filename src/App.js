@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { useState, useEffect } from "react"
 import { BrowserRouter, Routes, Route} from "react-router-dom";
@@ -6,6 +7,8 @@ import ReservePage from "./Pages/ReservePage/ReservePage.js"
 import Gabe from "./Pages/Gabe/Gabe.js"
 import LoadingPage from './Pages/LoadingPage/LoadingPage.js';
 import History from "./Pages/History/History.js"
+import Navbar from './Components/Navbar/Navbar.js';
+
 
 function App() {
 
@@ -20,7 +23,10 @@ function App() {
   return <LoadingPage />
   else
   return (
+    <>
+    
     <BrowserRouter>
+    <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
         <Route path="/Reserve" element={<ReservePage />} />
@@ -28,7 +34,7 @@ function App() {
         <Route path="/History" element={<History />} />
       </Routes>
     </BrowserRouter>
-    
+    </>
 
   )
 
