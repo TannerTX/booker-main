@@ -28,11 +28,6 @@ export default function Jobs() {
             <JobListing />
             <JobListing />
             <JobListing />
-            <JobListing />
-            <JobListing />
-            <JobListing />
-            <JobListing />
-            <JobListing />
         </div>
 
 
