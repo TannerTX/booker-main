@@ -7,6 +7,7 @@ import ReservePage from "./Pages/ReservePage/ReservePage.js"
 import Gabe from "./Pages/Gabe/Gabe.js"
 import LoadingPage from './Pages/LoadingPage/LoadingPage.js';
 import History from "./Pages/History/History.js"
+import Jobs from "./Pages/Jobs/Jobs.js"
 import Navbar from './Components/Navbar/Navbar.js';
 
 
@@ -19,19 +20,19 @@ function App() {
     setTimeout(() => setIsLoading(false), 2000)
   }, [])
 
-  if(isLoading)
-  return <LoadingPage />
-  else
+  // if(isLoading)
+  // return <LoadingPage />
+  // else
   return (
     <>
-    
     <BrowserRouter>
     <Navbar />
-      <Routes>
+      <Routes> 
         <Route index element={<Homepage />} />
         <Route path="/Reserve" element={<ReservePage />} />
         <Route path="/Gabe" element={<Gabe />} />
         <Route path="/History" element={<History />} />
+        <Route path="Jobs" element={<Jobs />} />
       </Routes>
     </BrowserRouter>
     </>

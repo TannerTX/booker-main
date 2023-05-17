@@ -1,0 +1,32 @@
+.Jobs-MainContainer {
+    animation: listing-fadein 1s ease 0s 1 normal forwards;
+    width: 90%;
+    height: 85%;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    /* transform: translate(-50%, 5%); */
+    background-color: rgb(156, 147, 147);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 100vh; */
+    background-color: rgba(0, 128, 0, 0);
+    border-radius: 20px;
+    /* border: 1px solid black; */
+    overflow-y: scroll;
+    
+  }
+
+  @keyframes listing-fadein {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

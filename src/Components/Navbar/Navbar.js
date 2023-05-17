@@ -1,11 +1,36 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react"
+import { useNavigate } from "react-router-dom";
+import { NavbarData } from "./NavbarData.js"
+import './Navbar.css';
 
-function Navbar() {
+export default function Navbar() {
+  let navigate = useNavigate();
+  const routeChange = (newPath) => {
+    navigate(newPath);
+  };
 
+  /*
+   -- FUTURE ADDITION FOR EASE-OF-USE --
+   Implement New buttons for navbar through json
+  */
   return (
-    <h2>H</h2>
-  )
-}
+    <div className="Navbar-Main">
+      <table>
+        <tbody>
+          <tr>
 
-export default Navbar
+            {NavbarData.map((item) => (
+              <td>
+                <button className="btn2" onClick={() => navigate(item.path)}>
+                  {item.title}
+                </button>
+              </td>
+            ))}
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}

@@ -42,10 +42,10 @@ export default function History() {
         
         <div className="Main">
         <button id="homeb" className="btn" onClick={() => routeChange("/")}></button>
-        {reservations.map(item => 
+        {
+        reservations.map(item => 
             <div className="card">
             <h3>
-
                 {item.DateOfArrival || "Empty"} 
                  <br /> <br />
                 {item.Destination || "Empty"}
