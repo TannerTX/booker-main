@@ -1,0 +1,10 @@
+.Listing-Main {
+    background-color: rgba(255, 0, 0, 0.527);
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    overflow-wrap: break-word;
+}

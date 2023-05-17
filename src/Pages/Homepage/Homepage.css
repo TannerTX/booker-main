@@ -9,14 +9,34 @@
     height: 100vh;
   }
 
-  @keyframes Welcome {
-	0% {
-		transform: scale(0.5);
-	}
 
-	100% {
-		transform: scale(1);
-	}
+  @keyframes Welcome {
+    0% {
+      transform: scale(0.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  @keyframes hoverAnimation {
+  
+    from {
+      tranform: translateY(-10px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  
+  }
+
+  @media (max-width: 2000px){
+    img {
+        width: 75%
+    }
+
 }
 
 footer {
@@ -26,18 +46,24 @@ footer {
    animation: Welcome 2s ease 0s 1 normal forwards;
 }
 
+
 #Welcome_Load {
     margin-bottom: 60px;
-    animation: Welcome 2s ease 0s 1 normal forwards;
+}
+
+.growAnimation {
+  animation: Welcome 2s ease 0s 1 normal forwards;
+}
+
+.hoverAnimation {
+  animation: hoverAnimation 3s infinite alternate;
 }
 
 
-@media (max-width: 2000px){
-    img {
-        width: 75%
-    }
 
-}
+
+
+
 
 
 a {
