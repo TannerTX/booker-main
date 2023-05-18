@@ -15,6 +15,7 @@ function Homepage() {
 
         <div className="MainContainer">
         <img alt="h" id="Welcome_Load" className="growAnimation hoverAnimation" src={mainLogo} style={{"animation-fill-mode":"forwards"}} />
+        <div class="ellipse"></div>
         <footer><i><a href="https://github.com/TannerTX">@TannerTX</a></i></footer>
         </div>
     )
