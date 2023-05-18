@@ -1,7 +1,11 @@
 /* body { background-color: #FFEAD2; } */
 
+.Navbar-Main {
+  background-color: none;
+}
+
 .Navbar-Main table { 
-    width: 100%;
+    width: 100vw;
     /* position:relative; */
     /* background-color: #F2B6A0; */
     display: flex;
@@ -10,10 +14,11 @@
 }
 
 
+
 .btn2 {
-    padding: 0.5em 5em;
+    padding: 0.5em 3vw;
     /* left: 75%; */
-    width: 100%;
+    /* width: 25%; */
     font-size: 20px;
     color: #0000008c;
     font-family: inherit;
@@ -28,6 +33,29 @@
     transition-property: color;
   }
   
+  @media (max-width: 480px) {
+    .btn2 {
+      width: 100%;
+      font-size: 3vh;
+      padding: 0.5em 3vw;
+      /* left: 75%; */
+      /* width: 25%; */
+      font-size: 20px;
+      color: #0000008c;
+      font-family: inherit;
+      font-weight: 750;
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      text-transform: uppercase;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color;
+    }
+  }
+
+
   .btn2:focus,
   .btn2:hover {
     color: #fff;
@@ -37,6 +65,15 @@
   .btn2:hover:after {
     width: 50%;
     left: 25%;
+  }
+
+
+  @media (max-width: 480px) {
+    .btn2:focus:after,
+    .btn2:hover:after {
+      width: 50%;
+      left: 25%;
+    }
   }
   
   .btn2:after {

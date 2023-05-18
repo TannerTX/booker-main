@@ -19,7 +19,6 @@ export default function Navbar() {
       <table>
         <tbody>
           <tr>
-
             {NavbarData.map((item) => (
               <td>
                 <button className="btn2" onClick={() => navigate(item.path)}>

@@ -9,12 +9,12 @@ export const NavbarData = [
     {
         title: "Option 2",
         path: "/",
-        icon: <Aicons.AiFillHome />
+        icon: <Aicons.AiFillQuestionCircle />
     }, 
     {
         title: "Option 3",
         path: "/",
-        icon: <Aicons.AiFillHome />
+        icon: <Aicons.AiOutlinePlusCircle />
     },
     {
         title: "Job Listings",
