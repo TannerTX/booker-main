@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+
+body {
+  background: linear-gradient(143deg, #ffead2, #f7e1ae, #c9e7c9, #acbcff);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName1 18s ease infinite;
+  -moz-animation: AnimationName2 18s ease infinite;
+  animation: AnimationName3 18s ease infinite;
+}
+
+@-webkit-keyframes AnimationName1 {
+  0%{background-position:24% 0%}
+  50%{background-position:77% 100%}
+  100%{background-position:24% 0%}
+}
+@-moz-keyframes AnimationName2 {
+  0%{background-position:24% 0%}
+  50%{background-position:77% 100%}
+  100%{background-position:24% 0%}
+}
+@keyframes AnimationName3 {
+  0%{background-position:24% 0%}
+  50%{background-position:77% 100%}
+  100%{background-position:24% 0%}
+}

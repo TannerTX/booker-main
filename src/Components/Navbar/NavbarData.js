@@ -1,18 +1,24 @@
+import * as Aicons from "react-icons/ai"
+
 export const NavbarData = [
     {
         title: "Home",
-        path: "/"
+        path: "/",
+        icon: <Aicons.AiFillHome />
     },
     {
         title: "Option 2",
-        path: "/"
+        path: "/",
+        icon: <Aicons.AiFillHome />
     }, 
     {
         title: "Option 3",
-        path: "/"
+        path: "/",
+        icon: <Aicons.AiFillHome />
     },
     {
         title: "Job Listings",
-        path: "/Jobs"
+        path: "/Jobs",
+        icon: <Aicons.AiFillContainer />
     }
 ]

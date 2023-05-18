@@ -23,7 +23,7 @@ export default function Navbar() {
             {NavbarData.map((item) => (
               <td>
                 <button className="btn2" onClick={() => navigate(item.path)}>
-                  {item.title}
+                  {item.icon}
                 </button>
               </td>
             ))}
