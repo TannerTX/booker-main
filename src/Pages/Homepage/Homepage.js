@@ -19,7 +19,7 @@ function Homepage() {
         {/* <button className="btn" onClick={() => routeChange("/History")}>View Current Reservations</button> */}
         {/* <button className="btn" onClick={() => routeChange("/Gabe")}>Picture of Gabe</button> */}
         {/* <button className="btn" onClick={() => routeChange("/Jobs")}>Job Postings</button> */}
-        <footer><i><a href="https://github.com/TannerTX">@TannerTX</a></i></footer>
+        <footer><i><a href="https://github.com/TannerTX">@TannerTsX</a></i></footer>
         </div>
     )
 
