@@ -13,7 +13,7 @@ export const NavbarData = [
     }, 
     {
         title: "Option 3",
-        path: "/",
+        path: "/Insert",
         icon: <Aicons.AiOutlinePlusCircle />
     },
     {

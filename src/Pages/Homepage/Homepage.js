@@ -15,10 +15,6 @@ function Homepage() {
 
         <div className="MainContainer">
         <img alt="h" id="Welcome_Load" className="growAnimation hoverAnimation" src={mainLogo} style={{"animation-fill-mode":"forwards"}} />
-        {/* <button className="btn" onClick={() => routeChange("/Reserve")}>Schedule a Trip</button> */}
-        {/* <button className="btn" onClick={() => routeChange("/History")}>View Current Reservations</button> */}
-        {/* <button className="btn" onClick={() => routeChange("/Gabe")}>Picture of Gabe</button> */}
-        {/* <button className="btn" onClick={() => routeChange("/Jobs")}>Job Postings</button> */}
         <footer><i><a href="https://github.com/TannerTX">@TannerTX</a></i></footer>
         </div>
     )
