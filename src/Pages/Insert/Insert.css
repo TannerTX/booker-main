@@ -12,12 +12,11 @@
 }
 
 .InsertForm {
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.397);
+  border-radius: 10px;
   position: absolute;
   width: 25%;
   height: 100%;
-
-
 }
 
 .slide-left {
@@ -29,7 +28,8 @@
 }
 
 .InsertPreview {
-  background-color: aqua;
+  background-color: rgba(0, 132, 255, 0.404);
+  border-radius: 10px;
   position: absolute;
   width: 25%;
   height: 100%;
@@ -67,6 +67,7 @@
   .InsertForm {
     background-color: green;
     position: absolute;
+    border-radius: 10px;
     width: 40%;
     height: 100%;
   }
@@ -74,6 +75,7 @@
   .InsertPreview {
     background-color: aqua;
     position: absolute;
+    border-radius: 10px;
     width: 40%;
     height: 100%;
     left: 53%;

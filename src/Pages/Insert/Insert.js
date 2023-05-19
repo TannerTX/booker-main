@@ -35,6 +35,8 @@ export default function Insert(props) {
     const handleImg = (e) => setJobImg(e.target.value)
     const toggleSlidePrev = () => {
         
+        // Do error checking here before engaging slide
+
         if(!shouldSlide) { // If the preview btn hasn't been pressed yet, start anim
         setShouldSlide(true)
         setPreviewInfo({
@@ -65,27 +67,31 @@ export default function Insert(props) {
     }
 
     return (
-        <>
+      <>
         <div className="InsertMainContainer">
-            <div className={`InsertForm ${shouldSlide ? 'slide-left' : ''}`}>
+          <div className={`InsertForm ${shouldSlide ? "slide-left" : ""}`}>
             <p>Form</p>
-            <select className="form-select modified-select" onChange={(e) => handleSelection(e)}>{formattedJobTypes}</select>
+
+            <select className="form-select modified-select" onChange={(e) => handleSelection(e)} >
+              {formattedJobTypes}
+            </select>
+
             <button onClick={() => toggleSlidePrev()}>Preview</button>
+
             <p>SELECTED: {jobCat}</p>
+          </div>
+
+          {isPreview && (
+            <div className="InsertPreview slide-right">
+              <p>Preview</p>
+              <p>LINK: {previewInfo.link}</p>
+              <p>IMG: {previewInfo.imgURL}</p>
+              <p>CATEGORY: {previewInfo.category}</p>
             </div>
-
-            { isPreview &&
-                <div className="InsertPreview slide-right">
-                <p>Preview</p>
-                <p>LINK: {previewInfo.link}</p>
-                <p>IMG: {previewInfo.imgURL}</p>
-                <p>CATEGORY: {previewInfo.category}</p>
-                </div>
-            }
-
+          )}
         </div>
-        </>
-    )
+      </>
+    );
 
 
 }
