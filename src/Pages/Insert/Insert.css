@@ -38,6 +38,18 @@
   animation: listing-fadein 1s ease 0s 1 normal forwards;
 }
 
+.modified-select {
+  width: 95%;
+  padding: 10px;
+  text-align: center;
+  position:relative;
+  left: 50%;
+  transform:translate(-50%, 0%);
+  margin-bottom: 10px;
+}
+
+
+/* PHONE CSS */
 @media (max-width: 480px) {
   
   .InsertMainContainer {
@@ -67,6 +79,14 @@
     left: 53%;
     /* transform: translateX(60%); */
     animation: listing-fadein 1s ease 0s 1 normal forwards;
+  }
+
+  .modified-select {
+    width: 95%;
+    padding: 10%;
+    /* height: */
+    font-size: 2vw;
+    text-align: center;
   }
 }
 

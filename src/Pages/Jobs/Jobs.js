@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from '../../Components/Navbar/Navbar.js';
 import JobListing from "../../Components/JobListing/JobListing.js"
 
+
 export default function Jobs() {
     
 
