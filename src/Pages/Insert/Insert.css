@@ -16,7 +16,18 @@
   border-radius: 10px;
   position: absolute;
   width: 25%;
-  height: 100%;
+  height: 70%;
+  /* padding-top: 15%; */
+}
+
+.InsertFormContent {
+  /* background-color: red; */
+  margin-top: 30%;
+}
+
+.InsertPreviewContent {
+  /* background-color: red; */
+  margin-top: 50%;
 }
 
 .slide-left {
@@ -32,7 +43,7 @@
   border-radius: 10px;
   position: absolute;
   width: 25%;
-  height: 100%;
+  height: 70%;
   left: 52%;
   /* transform: translateX(60%); */
   animation: listing-fadein 1s ease 0s 1 normal forwards;
@@ -49,10 +60,16 @@
   margin-bottom: 10px;
 }
 
+.small-select {
+  width: 50%;
+}
+
 .btn {
   position: relative;
   margin: 5px;
 }
+
+
 
 
 .input {
@@ -95,14 +112,16 @@
 }
 
 .title {
-  font-size: 28px;
-  color: royalblue;
+  font-size: 1.5vw;
+  color: rgb(250, 247, 220);
   font-weight: 600;
   letter-spacing: -1px;
   margin-top: 10px;
   margin-bottom: 10px;
   display: inline-flex;
   align-items: center;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.4px;
 }
 
 .title::before {
@@ -111,16 +130,9 @@
   width: 16px;
   border-radius: 50%;
   margin-right: 10px;
-  background-color: royalblue;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
+  background-color: rgb(228, 212, 160);
   animation: pulse 1s linear infinite;
 }
-
-
 
 
 
@@ -165,7 +177,20 @@
     font-size: 2vw;
     text-align: center;
   }
+
+  .title {
+    font-size: 3vw;
+    color: rgb(225, 188, 65);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+  }
 }
+
+
 
 
 

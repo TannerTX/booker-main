@@ -22,20 +22,41 @@ export default function Insert(props) {
         "General IT",
         "Other"
       ]
+
+    const JobModalities = ["Remote", "In-Office", "Hybrid"]
     const tempCodes = ['aabb', 'bt3', 'james'] // Implement DB checking eventually
     const [jobLink, setJobLink] = useState(null)
     const [jobImg, setJobImg] = useState(null)
     const [jobCat, setJobCat] = useState(JobTypes[0])
+    const [jobModality, setJobModality] = useState(JobModalities[0])
     const [isPreview, setIsPreview] = useState(false)
     const [shouldSlide, setShouldSlide] = useState(false)
     const [accessCode, setAccessCode] = useState(null)
     const [formErrors, setFormErrors] = useState(null)
     const [previewInfo, setPreviewInfo] = useState({})
+    const [submitBtnStatus, setSubmitBtnStatus] = useState(true)
 
     const formattedJobTypes = JobTypes.map((type, idx) => (<option key={idx} value={type}>{type}</option>))
-    const handleSelection = (e) => setJobCat(e.target.value)
-    const handleLink = (e) => setJobLink(e.target.value)
+    const formattedJobModalities = JobModalities.map((type, idx) => (<option key={idx} value={type}>{type}</option>))
+
+    const handleSelection = (e) => {e.preventDefault(); setJobCat(e.target.value)}
+    const handleModality = (e) => {e.preventDefault(); setJobModality(e.target.value)}
+    const handleLink = (e) => {e.preventDefault(); setJobLink(e.target.value)}
     const handleImg = (e) => setJobImg(e.target.value)
+    const handleAccessCode = (e) => {e.preventDefault(); setAccessCode(e.target.value)}
+    
+    
+    useEffect(() => {
+
+      if(jobLink && accessCode)
+      setSubmitBtnStatus(false)
+      else setSubmitBtnStatus(true)
+
+    }, [jobLink, accessCode])
+    
+    
+    
+    
     const toggleSlidePrev = () => {
         
         // Do error checking here before engaging slide
@@ -56,8 +77,7 @@ export default function Insert(props) {
             imgURL: (jobImg || "NONE"),
             category: (jobCat || "NONE")
             })
-        }
-        
+        }  
     }
 
     const checkErrors = () => {
@@ -77,41 +97,71 @@ export default function Insert(props) {
       <>
         <div className="InsertMainContainer">
           <div className={`InsertForm ${shouldSlide ? "slide-left" : ""}`}>
-
             <div className="titleContainer">
-            <h3 className="title">Insert Form</h3>
+              <h3 className="title">Insert Job Listing</h3>
             </div>
 
+            <div className="InsertFormContent">
+              <input
+                placeholder="Job Link"
+                type="text"
+                className="input input-long"
+                onChange={(e) => handleLink(e)}
+              />
+
+              <select
+                className="form-select modified-select"
+                onChange={(e) => handleSelection(e)}
+              >
+                {formattedJobTypes}
+              </select>
 
 
-            <input placeholder="Job Link" type="text" name="text" className="input input-long" />
+              <select
+                className="form-select modified-select small-select"
+                onChange={(e) => handleModality(e)}
+              >
+                {formattedJobModalities}
+              </select>
 
-            <select className="form-select modified-select" onChange={(e) => handleSelection(e)} >
-              {formattedJobTypes}
-            </select>
 
-            <input placeholder="Access Code" type="text" name="text" className="input" />
+              <input
+                placeholder="Access Code"
+                type="text"
+                className="input"
+                onChange={(e) => handleAccessCode(e)}
+              />
+              <br />
 
-            <br />
-            <button
-              className="btn btn-primary"
-              onClick={() => toggleSlidePrev()}
-            >
-              Preview
-            </button>
-            <button className="btn btn-success" onClick={() => handleSubmit()}>
-              Submit
-            </button>
 
-            <p>SELECTED: {jobCat}</p>
+
+
+
+              <br />
+              <button
+                disabled={submitBtnStatus}
+                className="btn btn-primary"
+                onClick={() => toggleSlidePrev()}
+              >
+                Preview
+              </button>
+              <button
+                disabled={submitBtnStatus}
+                className="btn btn-success"
+                onClick={() => handleSubmit()}
+              >
+                Submit
+              </button>
+            </div>
           </div>
 
           {isPreview && (
             <div className="InsertPreview slide-right">
-              <p>Preview</p>
-              <p>LINK: {previewInfo.link}</p>
-              <p>IMG: {previewInfo.imgURL}</p>
-              <p>CATEGORY: {previewInfo.category}</p>
+              <div className="titleContainer">
+                <h3 className="title">Preview</h3>
+              </div>
+
+              <div className="InsertPreviewContent"></div>
             </div>
           )}
         </div>
