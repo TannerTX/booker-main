@@ -1,4 +1,4 @@
-.btn {
+.btn3 {
     display: block;
     padding: 1.1em 2em;
     margin-bottom: 15px;
@@ -16,7 +16,7 @@
     box-shadow: 0 2px 0 2px #000;
    }
    
-   .btn:before {
+   .btn3:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -27,17 +27,17 @@
     transition: all 0.5s;
    }
    
-   .btn:hover {
+   .btn3:hover {
     background-color: #4cc9f0;
     color: #fff;
     box-shadow: 0 2px 0 2px #0d3b66;
    }
    
-   .btn:hover::before {
+   .btn3:hover::before {
     transform: skewX(30deg) translate(150%, -50%);
     transition-delay: 0.1s;
    }
    
-   .btn:active {
+   .btn3:active {
     transform: scale(0.9);
    }

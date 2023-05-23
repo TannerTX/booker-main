@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 import "./Insert.css"
 import { useNavigate } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import app_connection from "../../firebase.js"
+import { collection, getFirestore, addDoc} from 'firebase/firestore';
 
 
 
@@ -10,6 +11,8 @@ export default function Insert(props) {
 
     let navigate = useNavigate()
     const routeChange = (newPath) => { navigate(newPath) }
+
+    const db = getFirestore(app_connection)
 
     const JobTypes = [
         "Cyber Security",
@@ -66,17 +69,39 @@ export default function Insert(props) {
 
     }
 
+    const handleSubmit = () => {
+      return
+    }
+
     return (
       <>
         <div className="InsertMainContainer">
           <div className={`InsertForm ${shouldSlide ? "slide-left" : ""}`}>
-            <p>Form</p>
+
+            <div className="titleContainer">
+            <h3 className="title">Insert Form</h3>
+            </div>
+
+
+
+            <input placeholder="Job Link" type="text" name="text" className="input input-long" />
 
             <select className="form-select modified-select" onChange={(e) => handleSelection(e)} >
               {formattedJobTypes}
             </select>
 
-            <button onClick={() => toggleSlidePrev()}>Preview</button>
+            <input placeholder="Access Code" type="text" name="text" className="input" />
+
+            <br />
+            <button
+              className="btn btn-primary"
+              onClick={() => toggleSlidePrev()}
+            >
+              Preview
+            </button>
+            <button className="btn btn-success" onClick={() => handleSubmit()}>
+              Submit
+            </button>
 
             <p>SELECTED: {jobCat}</p>
           </div>
