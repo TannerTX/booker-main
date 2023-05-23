@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import app_connection from "../../firebase.js"
 import { collection, getFirestore, addDoc} from 'firebase/firestore';
-
+import placeholderImg from "../../Images/placeholder-image.png"
 
 
 export default function Insert(props) {
@@ -28,6 +28,7 @@ export default function Insert(props) {
     const [jobLink, setJobLink] = useState(null)
     const [jobImg, setJobImg] = useState(null)
     const [jobCat, setJobCat] = useState(JobTypes[0])
+    const [jobTitle, setJobTitle] = useState(null)
     const [jobModality, setJobModality] = useState(JobModalities[0])
     const [isPreview, setIsPreview] = useState(false)
     const [shouldSlide, setShouldSlide] = useState(false)
@@ -35,6 +36,10 @@ export default function Insert(props) {
     const [formErrors, setFormErrors] = useState(null)
     const [previewInfo, setPreviewInfo] = useState({})
     const [submitBtnStatus, setSubmitBtnStatus] = useState(true)
+    const [fetchData, setFetchData] = useState(null)
+
+      // NEED JOB AUTHOR
+
 
     const formattedJobTypes = JobTypes.map((type, idx) => (<option key={idx} value={type}>{type}</option>))
     const formattedJobModalities = JobModalities.map((type, idx) => (<option key={idx} value={type}>{type}</option>))
@@ -44,17 +49,20 @@ export default function Insert(props) {
     const handleLink = (e) => {e.preventDefault(); setJobLink(e.target.value)}
     const handleImg = (e) => setJobImg(e.target.value)
     const handleAccessCode = (e) => {e.preventDefault(); setAccessCode(e.target.value)}
-    
+    const handleTitle = (e) => {e.preventDefault(); setJobTitle(e.target.value)}
     
     useEffect(() => {
 
-      if(jobLink && accessCode)
+      if(jobLink && accessCode && jobTitle)
       setSubmitBtnStatus(false)
       else setSubmitBtnStatus(true)
 
-    }, [jobLink, accessCode])
+    }, [jobLink, accessCode, jobTitle])
     
-    
+
+    useEffect(() => {
+      console.log(fetchData)
+    }, [fetchData])
     
     
     const toggleSlidePrev = () => {
@@ -64,18 +72,22 @@ export default function Insert(props) {
         if(!shouldSlide) { // If the preview btn hasn't been pressed yet, start anim
         setShouldSlide(true)
         setPreviewInfo({
+            title: (jobTitle || "NONE"),
             link:(jobLink || "NONE"),
             imgURL: (jobImg || "NONE"),
-            category: (jobCat || "NONE")
+            category: (jobCat || "NONE"),
+            modality: (jobModality || "NONE")
             })
         setTimeout(() => {setIsPreview(!isPreview)}, 1000)
         }
 
         else { // If preview btn is pressed, update preview pane
         setPreviewInfo({
+            title: (jobTitle || "NONE"),
             link:(jobLink || "NONE"),
             imgURL: (jobImg || "NONE"),
-            category: (jobCat || "NONE")
+            category: (jobCat || "NONE"),
+            modality: (jobModality || "NONE")
             })
         }  
     }
@@ -89,8 +101,12 @@ export default function Insert(props) {
 
     }
 
-    const handleSubmit = () => {
-      return
+    const handleSubmit = async () => {
+      
+      let url = `http://api.linkpreview.net/?key=083bac2255723fb368a4b628bd36a1b8&q=${jobLink}`
+      const response = await fetch(url)
+      const response_json = await response.json()
+      setFetchData(response_json)
     }
 
     return (
@@ -102,6 +118,14 @@ export default function Insert(props) {
             </div>
 
             <div className="InsertFormContent">
+
+            <input
+                placeholder="Job Title"
+                type="text"
+                className="input input-long"
+                onChange={(e) => handleTitle(e)}
+              />
+
               <input
                 placeholder="Job Link"
                 type="text"
@@ -131,13 +155,9 @@ export default function Insert(props) {
                 className="input"
                 onChange={(e) => handleAccessCode(e)}
               />
+              
               <br />
 
-
-
-
-
-              <br />
               <button
                 disabled={submitBtnStatus}
                 className="btn btn-primary"
@@ -157,11 +177,27 @@ export default function Insert(props) {
 
           {isPreview && (
             <div className="InsertPreview slide-right">
-              <div className="titleContainer">
-                <h3 className="title">Preview</h3>
+
+              <div className="titleContainer ">
+                <h3 className="title titleNewColor">Preview</h3>
+              </div>
+              {/* link:(jobLink || "NONE"), */}
+            {/* imgURL: (jobImg || "NONE"), */}
+            {/* category: (jobCat || "NONE"), */}
+            {/* modality: (jobModality || "NONE") */}
+
+              <div class="card">
+                <div class="card-image"><img src={placeholderImg} /></div>
+                <div class="category">
+                <span class="badge rounded-pill text-bg-danger">{previewInfo.category}</span> 
+                <span class="badge rounded-pill text-bg-primary">{previewInfo.modality}</span>  
+                </div>
+                <div class="heading"> <a className="prevLink" href={previewInfo.link}>{previewInfo.title}</a>
+                  <div class="author"><span className="name">Posted: </span>{new Date().toLocaleDateString()}</div>
+                </div>
               </div>
 
-              <div className="InsertPreviewContent"></div>
+
             </div>
           )}
         </div>

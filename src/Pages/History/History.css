@@ -1,4 +1,4 @@
-.MC {
+/* .MC {
     width: 100%;
     height: 50%;
     background-color: rgb(156, 147, 147);
@@ -18,10 +18,10 @@
     padding-top: 50%;
     /* padding-bottom: 500px; */
 
-  }
+  /* } */
 
 
-  .card {
+  /* .card {
     width: 290px;
     height: 254px;
     background: #07182E;
@@ -68,10 +68,10 @@
     ;
     inset: 5px;
     border-radius: 15px;
-  }  
+  }   */
   /* .card:hover:before {
     background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
     animation: rotBGimg 3.5s linear infinite;
   } */
   
-  
+   
