@@ -166,7 +166,7 @@ export default function Insert(props) {
                 Preview
               </button>
               <button
-                disabled={submitBtnStatus}
+                disabled={true}
                 className="btn btn-success"
                 onClick={() => handleSubmit()}
               >

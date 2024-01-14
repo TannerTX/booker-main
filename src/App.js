@@ -10,6 +10,8 @@ import History from "./Pages/History/History.js"
 import Jobs from "./Pages/Jobs/Jobs.js"
 import Navbar from './Components/Navbar/Navbar.js';
 import Insert from './Pages/Insert/Insert.js'
+import About from './Pages/About/About.js'
+
 
 function App() {
 
@@ -32,8 +34,9 @@ function App() {
         <Route path="/Reserve" element={<ReservePage />} />
         <Route path="/Gabe" element={<Gabe />} />
         <Route path="/History" element={<History />} />
-        <Route path="Jobs" element={<Jobs />} />
-        <Route path="Insert" element={<Insert />} />
+        <Route path="/Jobs" element={<Jobs />} />
+        <Route path="/Insert" element={<Insert />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
     </>

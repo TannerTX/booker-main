@@ -29,15 +29,16 @@ export default function Jobs() {
     return (
 
         <div className="Jobs-MainContainer">
-          { listings &&
-          listings.map(listing => (
-            <>
-            <h1>{listing.jobCat}</h1>
-            {/* <img src={listing.jobImgURL}></img> */}
-            </>
-          ))
-
-          }  
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
+          <JobListing />
         </div>
 
 

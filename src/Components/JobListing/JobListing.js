@@ -10,7 +10,7 @@ export default function JobListing(props) {
     return(
 
         <div className="Listing-Main">
-            <h2>{props.inside || "JOB LISTING"}</h2>
+            <h2>{props.inside || "THESE ARE JUST PLACEHOLDERS RELAX"}</h2>
         </div>
 
     )

@@ -7,8 +7,8 @@ export const NavbarData = [
         icon: <Aicons.AiFillHome />
     },
     {
-        title: "Option 2",
-        path: "/",
+        title: "About",
+        path: "/About",
         icon: <Aicons.AiFillQuestionCircle />
     }, 
     {
