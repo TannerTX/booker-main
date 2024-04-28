@@ -9,9 +9,7 @@ export default function About() {
 
 
         <h1 id="nope">
-            Impatient Fuck. This page has 0 functionality so why would I
-            do anything with it right now when I could be working on something
-            that requires functionality???
+            Dade Plastidip????
         </h1>
 
 
