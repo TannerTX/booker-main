@@ -16,21 +16,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          MEASUREMENT_ID: ${{ secrets.MEASUREMENT_ID }}
+          MESSAGING_ID: ${{ secrets.MESSAGING_ID }}
+          APP_ID: ${{ secrets.APP_ID }}
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          MEASUREMENT_ID: ${{ secrets.MEASUREMENT_ID }}
-          MESSAGING_ID: ${{ secrets.MESSAGING_ID }}
-          APP_ID: ${{ secrets.APP_ID }}
