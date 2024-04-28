@@ -6,7 +6,7 @@ import LoadingPage from "../LoadingPage/LoadingPage.js";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import app_connection from "../../firebase.js"
 import { useNavigate } from "react-router-dom";
-import Navbar from '../../Components/Navbar/Navbar.js';
+// import Navbar from '../../Components/Navbar/Navbar.js';
 
 
 export default function History() {
@@ -14,7 +14,7 @@ export default function History() {
     const [isLoading, setIsLoading] = useState(true)
     const [reservations, setReservations] = useState([])
     const db = getFirestore(app_connection)
-    const colRef = collection(db, "Bookings")
+    // const colRef = collection(db, "Bookings")
     
     let navigate = useNavigate()
     const routeChange = (newPath) => {
