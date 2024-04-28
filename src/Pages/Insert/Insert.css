@@ -2,17 +2,17 @@
   animation: listing-fadein 1s ease 0s 1 normal forwards;
   background-color: rgba(182, 35, 35, 0);
   width: 90%;
-  height: 85%;
+  height: 65%;
   position: absolute;
   left: 5%;
-  top: 10%;
+  top: 30%;
   text-align: center;
   justify-content: center;
   display: flex;
 }
 
 .InsertForm {
-  background-color: rgba(0, 128, 0, 0.397);
+  background-color: rgba(71, 109, 71, 0.329);
   border-radius: 10px;
   position: absolute;
   width: 25%;
@@ -129,16 +129,16 @@
   width: 16px;
   border-radius: 50%;
   margin-right: 10px;
-  background-color: rgb(228, 212, 160);
+  background-color: rgb(224, 203, 134);
   animation: pulse 1s linear infinite;
 }
 
 .titleNewColor {
-  color: rgba(0, 174, 255, 0.493);
+  color: rgb(255, 115, 0);
 }
 
 .titleNewColor::before {
-  background-color: rgba(0, 174, 255, 0.37);
+  background-color: rgb(255, 115, 0);
 }
 
 .card {

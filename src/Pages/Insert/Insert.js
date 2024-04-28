@@ -6,6 +6,7 @@ import app_connection from "../../firebase.js"
 import { collection, getFirestore, addDoc} from 'firebase/firestore';
 import placeholderImg from "../../Images/placeholder-image.png"
 
+// TODO re-enable submit btn if fields are populated, handle posting data payload to db
 
 export default function Insert(props) {
 
