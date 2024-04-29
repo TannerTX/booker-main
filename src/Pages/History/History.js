@@ -14,7 +14,7 @@ export default function History() {
     const [isLoading, setIsLoading] = useState(true)
     const [reservations, setReservations] = useState([])
     const db = getFirestore(app_connection)
-    // const colRef = collection(db, "Bookings")
+    const colRef = collection(db, "Bookings")
     
     let navigate = useNavigate()
     const routeChange = (newPath) => {
