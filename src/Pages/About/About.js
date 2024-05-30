@@ -54,6 +54,14 @@ export default function About() {
         input.click();
     };
 
+    const videoData = mediaData
+        .filter(item => isVideoLink(item.link))
+        .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+    const imageData = mediaData
+        .filter(item => isMediaLink(item.link) && !isVideoLink(item.link))
+        .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
     return (
         <div className="parent-container">
             <button 
@@ -62,32 +70,31 @@ export default function About() {
             >
                 Upload Directory
             </button>
-            <div className="media-preview">
-                {mediaData.map((item, index) => (
-                    <div key={index} className="media-container">
-                        {isVideoLink(item.link) ? (
-                            <>
+            <div className="media-section">
+                <h2>Videos</h2>
+                <div className="media-preview">
+                    {videoData.map((item, index) => (
+                        <div key={index} className="media-container">
                             <p>{item.timestamp}</p>
                             <video controls className="preview-media">
                                 <source src={item.link} type="video/mp4" />
                                 <source src={item.link} type="video/quicktime" />
                                 Your browser does not support the video tag.
                             </video>
-                            <br />
-                            </>
-                        ) : isMediaLink(item.link) ? (
-                            <>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="media-section">
+                <h2>Images</h2>
+                <div className="media-preview">
+                    {imageData.map((item, index) => (
+                        <div key={index} className="media-container">
                             <p>{item.timestamp}</p>
                             <img src={item.link} alt={item.timestamp} className="preview-image" />
-                            <br />
-                            </>
-                        ) : (
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                {item.link}
-                            </a>
-                        )}
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
