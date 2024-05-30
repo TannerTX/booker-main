@@ -23,12 +23,18 @@ export default function Jobs() {
           setListings(listings);
         };
         fetchData();
+        console.log(listings[0])
       }, []);
 
 
     return (
 
         <div className="Jobs-MainContainer">
+          {listings.map((listing, idx) => (
+
+            <JobListing inside="HE" />
+          ))}
+          {/* <JobListing />
           <JobListing />
           <JobListing />
           <JobListing />
@@ -37,8 +43,7 @@ export default function Jobs() {
           <JobListing />
           <JobListing />
           <JobListing />
-          <JobListing />
-          <JobListing />
+          <JobListing /> */}
         </div>
 
 
