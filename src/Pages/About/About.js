@@ -26,6 +26,9 @@ export default function About() {
             });
         }
 
+        // Sort imageContents by timestamp in descending order
+        imageContents.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
         setImageData(imageContents);
         setMessages(messageContents);
     };
