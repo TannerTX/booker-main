@@ -3,7 +3,7 @@ import "./About.css";
 import BONNER from '../../Media/videos/BONNER.webm';
 
 export default function About() {
-    const [imageLinks, setImageLinks] = useState([]);
+    const [imageData, setImageData] = useState([]);
     const [messages, setMessages] = useState([]);
 
     const handleDirectoryUpload = async (event) => {
@@ -19,14 +19,14 @@ export default function About() {
 
             jsonData.forEach(item => {
                 if (item.Attachments && item.Attachments.includes('cdn.discordapp.com')) {
-                    imageContents.push(item.Attachments);
+                    imageContents.push({ link: item.Attachments, timestamp: item.Timestamp });
                 } else if (item.Contents) {
                     messageContents.push(item.Contents);
                 }
             });
         }
 
-        setImageLinks(imageContents);
+        setImageData(imageContents);
         setMessages(messageContents);
     };
 
@@ -37,7 +37,8 @@ export default function About() {
 
     return (
         <>
-            <input 
+            <input
+                className="inputBtn" 
                 type="file" 
                 webkitdirectory="true" 
                 directory="true" 
@@ -45,19 +46,22 @@ export default function About() {
                 onChange={handleDirectoryUpload}
             />
             <div className="image-preview">
-                {imageLinks.map((link, index) => (
+                {imageData.map((item, index) => (
                     <div key={index} className="image-container">
-                        {isImageLink(link) ? (
-                            <img src={link} alt="Uploaded content" className="preview-image" />
+                        {isImageLink(item.link) ? (
+                            <>
+                            <p>{item.timestamp}</p>
+                            <img src={item.link} alt={item.timestamp} className="preview-image" />
+                            <br />
+                            </>
                         ) : (
-                            <a href={link} target="_blank" rel="noopener noreferrer">
-                                {link}
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                {item.link}
                             </a>
                         )}
                     </div>
                 ))}
             </div>
-            
         </>
     );
 }
