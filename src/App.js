@@ -36,7 +36,7 @@ function App() {
         <Route path="/History" element={<History />} />
         <Route path="/Jobs" element={<Jobs />} />
         <Route path="/Insert" element={<Insert />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/Discord" element={<About />} />
       </Routes>
     </BrowserRouter>
     </>

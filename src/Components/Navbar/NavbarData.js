@@ -1,4 +1,5 @@
 import * as Aicons from "react-icons/ai"
+import * as Faicons from "react-icons/fa";
 
 export const NavbarData = [
     {
@@ -7,9 +8,9 @@ export const NavbarData = [
         icon: <Aicons.AiFillHome />
     },
     {
-        title: "About",
-        path: "/About",
-        icon: <Aicons.AiFillQuestionCircle />
+        title: "Discord",
+        path: "/Discord",
+        icon: <Faicons.FaDiscord />
     }, 
     {
         title: "Option 3",

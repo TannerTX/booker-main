@@ -2,7 +2,7 @@
   animation: listing-fadein 1s ease 0s 1 normal forwards;
   background-color: rgba(182, 35, 35, 0);
   width: 90%;
-  height: 65%;
+  height: 70%;
   position: absolute;
   left: 5%;
   top: 30%;
@@ -14,7 +14,7 @@
 .InsertForm {
   background-color: rgba(71, 109, 71, 0.329);
   border-radius: 10px;
-  position: absolute;
+  position: relative;
   width: 25%;
   height: 70%;
   /* padding-top: 15%; */
