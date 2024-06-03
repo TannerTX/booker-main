@@ -29,7 +29,6 @@
     margin-bottom: 10px;
 }
 
-
 .bn632-hover {
     left: 50%;
     /* transform:translate(-100%, 100%); */
@@ -66,10 +65,10 @@
     );
     box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
+
 .parent-container {
     text-align: center;
 }
-
 
 .media-preview {
     display: flex;
@@ -92,4 +91,44 @@
 .preview-image {
     max-width: 100%;
     height: auto;
+}
+
+/* New class for the show/hide button */
+.toggle-button {
+    position: absolute;
+    transform: translateY(5px);
+    width: 70px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 30px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(
+      to right,
+      #fc6076,
+      #ff9a44,
+      #ef9d43,
+      #e75516
+    );
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.toggle-button:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.extractHeader {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
