@@ -36,7 +36,7 @@ export default function About() {
 
         // Send message to Discord webhook
         try{
-        await fetch(process.env.REACT_APP_WEBHOOK_URL || "https://discord.com/api/webhooks/1247271883930472548/hchVrcJE5yeDNUKg1IEB9gNHvN8e3DQTavsCzLaLhb5lxfEzCbupfbfH9g9pzfNlasau", {
+        await fetch(process.env.REACT_APP_WEBHOOK_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
