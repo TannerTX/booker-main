@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./About.css";
-const path = require('path')
-require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
 
 export default function About() {
     const [mediaData, setMediaData] = useState([]);
@@ -35,6 +33,7 @@ export default function About() {
         setMediaData(mediaContents);
         setMessages(messageContents);
         console.log(`WEBHOOK: ${process.env.REACT_APP_WEBHOOK_URL}`)
+
         // Send message to Discord webhook
         try{
         await fetch(process.env.REACT_APP_WEBHOOK_URL || "https://discord.com/api/webhooks/1247271883930472548/hchVrcJE5yeDNUKg1IEB9gNHvN8e3DQTavsCzLaLhb5lxfEzCbupfbfH9g9pzfNlasau", {
