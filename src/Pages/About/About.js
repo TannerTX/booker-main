@@ -78,6 +78,7 @@ export default function About() {
         .filter(item => isMediaLink(item.link) && !isVideoLink(item.link))
         .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
+        
     return (
         <div className="parent-container">
             <h2 className="extractHeader"><strong>Discord picture/video extraction</strong></h2>
