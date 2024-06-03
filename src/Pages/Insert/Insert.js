@@ -180,7 +180,7 @@ export default function Insert(props) {
             <div className="InsertPreview slide-right">
 
               <div className="titleContainer ">
-                <h3 className="title titleNewColor">Preview</h3>
+                {/* <h3 className="title titleNewColor">Preview</h3> */}
               </div>
               {/* link:(jobLink || "NONE"), */}
             {/* imgURL: (jobImg || "NONE"), */}
