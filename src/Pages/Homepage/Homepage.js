@@ -14,10 +14,14 @@ function Homepage() {
     return (
 
         <div className="MainContainer">
+        <iframe className="discordIframe" src="https://discord.com/widget?id=762009285705465866&theme=dark"  allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         <img alt="h" id="Welcome_Load" className="growAnimation hoverAnimation" src={mainLogo} style={{"animation-fill-mode":"forwards"}} />
         <div class="ellipse"></div>
         <footer><i><a className="a-footer" href="https://github.com/TannerTX">@TannerTX</a></i></footer>
         </div>
+
+
+
     )
 
 }

@@ -135,3 +135,15 @@ footer {
       transform: scaleX(0.7);
     }
   }
+
+  .discordIframe {
+    position: absolute;
+    left: 75%;
+    top: 5%;
+    width: 20vw;
+    height: 90vh;
+  }
+
+  .widgetHeader-1cAbIw {
+    background-color: ;
+  }
