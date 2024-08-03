@@ -104,9 +104,9 @@ export default function Insert(props) {
 
     const handleSubmit = async () => {
       
-      let url = `http://api.linkpreview.net/?key=083bac2255723fb368a4b628bd36a1b8&q=${jobLink}`
-      const response = await fetch(url)
-      const response_json = await response.json()
+      // let url = `http://api.linkpreview.net/?key=083bac2255723fb368a4b628bd36a1b8&q=${jobLink}`
+      // const response = await fetch(url)
+      // const response_json = await response.json()
       setFetchData(response_json)
     }
 
@@ -158,14 +158,14 @@ export default function Insert(props) {
               />
               
               <br />
-
+{/* 
               <button
                 disabled={submitBtnStatus}
                 className="btn btn-primary"
                 onClick={() => toggleSlidePrev()}
               >
                 Preview
-              </button>
+              </button> */}
               <button
                 disabled={true}
                 className="btn btn-success"
