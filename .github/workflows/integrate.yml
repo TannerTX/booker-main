@@ -3,6 +3,9 @@ name: node-ci
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches:
+      - '**'
 
   push:
     branches:
