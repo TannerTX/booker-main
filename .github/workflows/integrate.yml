@@ -4,9 +4,14 @@ on:
   pull_request:
     branches: [ master ]
 
+  push:
+    branches:
+      - '**'
+    
+
 
 jobs:
-  test_pull_request:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
