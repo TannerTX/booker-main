@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npx eslint . --ignore-pattern "build/*" --ignore-pattern ".config/*"
+      - run: npm run lint
       
   build:
     runs-on: ubuntu-latest
