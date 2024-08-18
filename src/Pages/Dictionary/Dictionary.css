@@ -1,0 +1,53 @@
+.dictionary-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .form-container {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Limit the width of the form */
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make sure the inputs take the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  .form-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Make sure the button takes the full width */
+    box-sizing: border-box;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .dictionary-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    min-height: 300px; /* Set a minimum height for the dictionary container */
+  }
+  

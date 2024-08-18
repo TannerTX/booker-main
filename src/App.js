@@ -12,6 +12,7 @@ import Navbar from './Components/Navbar/Navbar.js';
 import Insert from './Pages/Insert/Insert.js'
 import About from './Pages/About/About.js'
 import Policy from './Pages/Policy/Policy.js'
+import Dictionary from './Pages/Dictionary/Dictionary.js';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/Insert" element={<Insert />} />
         <Route path="/Discord" element={<About />} />
         <Route path="/Policy" element={<Policy />} />
+        <Route path="/Dictionary" element={<Dictionary />} />
       </Routes>
     </BrowserRouter>
     </>
