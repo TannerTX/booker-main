@@ -14,7 +14,7 @@ export const NavbarData = [
         icon: <Faicons.FaDiscord />
     }, 
     {
-        title: "Option 3",
+        title: "Add Listing",
         path: "/Insert",
         icon: <Aicons.AiOutlinePlusCircle />
     },
@@ -22,5 +22,10 @@ export const NavbarData = [
         title: "Job Listings",
         path: "/Jobs",
         icon: <Aicons.AiFillContainer />
+    },
+    {
+        title: "Dictionary",
+        path: "/Dictionary",
+        icon: <Faicons.FaBookDead />
     }
 ]
