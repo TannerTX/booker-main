@@ -5,22 +5,16 @@ import { NavbarData } from "./NavbarData.js"
 import './Navbar.css';
 
 export default function Navbar() {
+  
   let navigate = useNavigate();
-  const routeChange = (newPath) => {
-    navigate(newPath);
-  };
 
-  /*
-   -- FUTURE ADDITION FOR EASE-OF-USE --
-   Implement New buttons for navbar through json
-  */
   return (
     <div className="Navbar-Main">
       <table>
         <tbody>
           <tr>
-            {NavbarData.map((item) => (
-              <td>
+            {NavbarData.map((item, key) => (
+              <td key={key}>
                 <button className="btn2" onClick={() => navigate(item.path)}>
                   {item.icon}
                 </button>

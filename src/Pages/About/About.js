@@ -3,7 +3,7 @@ import "./About.css";
 
 export default function About() {
     const [mediaData, setMediaData] = useState([]);
-    const [messages, setMessages] = useState([]);
+    // const [messages, setMessages] = useState([]);
     const [isVideoSectionCollapsed, setIsVideoSectionCollapsed] = useState(false);
     const [isImageSectionCollapsed, setIsImageSectionCollapsed] = useState(false);
 
