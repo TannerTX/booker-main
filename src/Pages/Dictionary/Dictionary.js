@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Dictionary.css"
-import * as Aicons from "react-icons/ai"
 import * as Faicons from "react-icons/fa";
 
 const DictionaryPage = () => {
-  const [word, setWord] = useState('');
-  const [definition, setDefinition] = useState('');
+  // const [word, setWord] = useState('');
+  // const [definition, setDefinition] = useState('');
 
-  const handleAddWord = () => {
+  // const handleAddWord = () => {
     // This is where you would handle the backend call to Firestore
     // Example: Add the word and definition to Firestore
-    setWord('');
-    setDefinition('');
-  };
+    // setWord('');
+    // setDefinition('');
+  // };
 
   return (
 <div className="card-dic">
@@ -20,11 +19,11 @@ const DictionaryPage = () => {
   <form>
     <div className="field-dic">
       <Faicons.FaHandMiddleFinger className="input-icon-word-dic" />
-      <input autocomplete="off" id="logemail" placeholder="Word/Phrase" className="input-field-word-dic" name="phrase-textbox" />
+      <input id="logemail" placeholder="Word/Phrase" className="input-field-word-dic" name="phrase-textbox" />
     </div>
     <div className="field-dic">
       <Faicons.FaEdit className="input-icon-def-dic" />      
-      <input autocomplete="off" id="logpass" placeholder="Definition" className="input-field-def-dic" name="logpass" />
+      <input id="logpass" placeholder="Definition" className="input-field-def-dic" name="logpass" />
     </div>
     <button className="btn-dic" type="submit">Submit</button>
   </form>
