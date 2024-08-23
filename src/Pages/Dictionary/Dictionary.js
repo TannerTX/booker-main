@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import "./Dictionary.css"
+import * as Aicons from "react-icons/ai"
+import * as Faicons from "react-icons/fa";
 
 const DictionaryPage = () => {
   const [word, setWord] = useState('');
@@ -12,33 +15,20 @@ const DictionaryPage = () => {
   };
 
   return (
-    <div className="dictionary-page">
-      <div className="form-container">
-        <input
-          type="text"
-          placeholder="Word"
-          value={word}
-          onChange={(e) => setWord(e.target.value)}
-        />
-        <textarea
-          placeholder="Definition"
-          value={definition}
-          onChange={(e) => setDefinition(e.target.value)}
-        />
-        <button onClick={handleAddWord}>Add</button>
-      </div>
-      <div className="dictionary-container">
-        {/* Replace the below with dynamic content from Firestore */}
-        <div className="dictionary-entry">
-          <div className="word-box">Word 1</div>
-          <div className="definition-box">Definition 1</div>
-        </div>
-        <div className="dictionary-entry">
-          <div className="word-box">Word 2</div>
-          <div className="definition-box">Definition 2</div>
-        </div>
-      </div>
+<div className="card-dic">
+  <h4 className="title-dic">Dictionary Form</h4>
+  <form>
+    <div className="field-dic">
+      <Faicons.FaHandMiddleFinger className="input-icon-word-dic" />
+      <input autocomplete="off" id="logemail" placeholder="Word/Phrase" className="input-field-word-dic" name="phrase-textbox" />
     </div>
+    <div className="field-dic">
+      <Faicons.FaEdit className="input-icon-def-dic" />      
+      <input autocomplete="off" id="logpass" placeholder="Definition" className="input-field-def-dic" name="logpass" />
+    </div>
+    <button className="btn-dic" type="submit">Submit</button>
+  </form>
+</div>
   );
 };
 
