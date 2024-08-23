@@ -12,18 +12,18 @@ const DictionaryPage = () => {
     // setWord('');
     // setDefinition('');
   // };
-
+  
   return (
 <div className="card-dic">
   <h4 className="title-dic">Dictionary Form</h4>
-  <form>
+  <form onSubmit={(e) => e.preventDefault()}>
     <div className="field-dic">
       <Faicons.FaHandMiddleFinger className="input-icon-word-dic" />
-      <input id="logemail" placeholder="Word/Phrase" className="input-field-word-dic" name="phrase-textbox" />
+      <input id="phrase" placeholder="Word/Phrase" className="input-field-word-dic" name="phrase-textbox" />
     </div>
     <div className="field-dic">
       <Faicons.FaEdit className="input-icon-def-dic" />      
-      <input id="logpass" placeholder="Definition" className="input-field-def-dic" name="logpass" />
+      <input id="definition" placeholder="Definition" className="input-field-def-dic" name="logpass" />
     </div>
     <button className="btn-dic" type="submit">Submit</button>
   </form>

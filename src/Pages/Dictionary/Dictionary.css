@@ -1,69 +1,76 @@
 .card-dic {
-  width: 20vw;
-  padding: 1.8rem 1.0rem;
+  width: 90%;
+  max-width: 350px;
+  padding: 2.0rem 1.0rem;
   text-align: center;
-  background: #2a2b38;
+  border-radius: 10px;
+  background: #32334756;
+  /* background-image: linear-gradient(to right top, #bed188, #beca6f, #c0c255, #c4ba38, #c9b00c); */
+  /* background-image: linear-gradient(to right top, #c4abb9, #e1aeb8, #fab3aa, #ffbf96, #ffd183, #f9d375, #f1d667, #e6d95a, #d3c649, #c1b438, #afa226, #9d9011); */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure content stays within the card */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
 }
 
- 
- /*Inputs*/
- .field-dic {
+/* Inputs */
+.field-dic {
   margin-top: .5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: .5em;
-  background-color: #1f2029;
+  background-color: #1f20292f;
   border-radius: 4px;
   padding: .5em 1em;
- }
- 
- .input-icon-word-dic {
+  width: 100%; /* Ensure the field takes up full width */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allow wrapping of elements if needed */
+}
+
+.input-icon-word-dic, .input-icon-def-dic {
   height: 1em;
   width: 1em;
   fill: #ffeba7;
- }
+}
 
- .input-icon-def-dic {
-  height: 1em;
-  width: 1em;
-  fill: #ffeba7;
- }
- 
- .input-field-word-dic {
+.input-field-word-dic, .input-field-def-dic {
   background: none;
   border: none;
   outline: none;
-  width: 100%;
-  color: #d3d3d3;
- }
+  width: 100%; /* Full width of the field container */
+  color: #4e4e4e;
+}
 
- .input-field-def-dic {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
+.input-field-def-dic {
   height: 100px;
-  color: #d3d3d3;
- }
- 
- /*Text*/
- .title-dic {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.555);
+  opacity: 1; /* Ensure the color is fully opaque */
+}
+
+/* Text */
+.title-dic {
   margin-bottom: 1rem;
   font-size: 1.5em;
   font-weight: 500;
-  color: #f5f5f5;
- }
- 
- /*Buttons*/
- .btn-dic {
+  color: #130101a1;
+}
+
+/* Buttons */
+.btn-dic {
   margin: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-weight: bold;
   font-size: .8em;
   text-transform: uppercase;
@@ -73,27 +80,47 @@
   box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
   transition: all .3s ease-in-out;
  }
- 
- .btn-link-dic {
+
+.btn-link-dic {
   color: #f5f5f5;
   display: block;
   font-size: .75em;
   transition: color .3s ease-out;
- }
- 
- /*Hover & focus*/
- .field-dic input:focus::placeholder {
+}
+
+/* Hover & focus */
+.field-dic input:focus::placeholder {
   opacity: 0;
   transition: opacity .3s;
- }
- 
- .btn-dic:hover {
+}
+
+.btn-dic:hover {
   background-color: #5e6681;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
- }
- 
- .btn-link-dic:hover {
+}
+
+.btn-link-dic:hover {
   color: #ffeba7;
- }
- 
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+  .card-dic {
+    width: 95%;
+    padding: 1.2rem .8rem;
+  }
+
+  .title-dic {
+    font-size: 1.2em;
+  }
+
+  .btn-dic {
+    font-size: .7em;
+    padding: 0.5em 1em;
+  }
+
+  .input-field-def-dic {
+    height: 80px; /* Adjust height for smaller screens */
+  }
+}
