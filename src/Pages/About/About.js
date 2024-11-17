@@ -113,7 +113,7 @@ export default function About() {
             >
                 Upload Directory
             </button>
-            <button onClick={sendPost("TEST MESSAGE")}>PRESS ME</button>
+            <button onClick={() => sendPost("TEST MESSAGE")}>PRESS ME</button>
             {mediaData.length > 0 && (
                 <>
                     <div className="media-section">
