@@ -56,7 +56,7 @@ const BASE_DATA = {
 };
 /* eslint-disable */
 const sendPost = async (description) => {
-  const webhookUrl = 'https://discord.com/api/webhooks/1307587788337713253/QFwZcHDt1SiK4C3isAJ0NjDnT9XovF9WG73cma8gJ7k7kAnLPJ9MbEcI4t2DhbwczL6d';
+  const webhookUrl = 'https://discord.com/api/webhooks/1307593953872183296/-jUBUCt05Cl734Wm2tcmXSppMLFJCuMXIMnN4ebRuO1TZGcGIVxZ08lVkBVCcHPgchjT';
   // const webhookUrl = process.env.REACT_APP_SECRET_SANTA_URL_DEV
 
   const data = {
