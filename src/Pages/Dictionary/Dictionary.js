@@ -56,7 +56,7 @@ const BASE_DATA = {
 };
 
 const sendPost = async (description) => {
-  const webhookUrl = process.env.SS_WEBHOOK_URL
+  const webhookUrl = process.env.SECRET_SANTA_WEBHOOK_URL
   const data = {
     ...BASE_DATA,
     embeds: [
@@ -92,7 +92,7 @@ const BingoGrid = ({ onButtonClick }) => {
       {entries.map((entry, index) => (
         <button
           key={index}
-          onClick={() => onButtonClick(entry)}
+          onClick={() => onButtonClick(`${'`'+ entry + '`'}`)}
           style={{
             padding: '10px',
             fontSize: '14px',
