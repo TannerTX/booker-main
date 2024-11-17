@@ -29,6 +29,9 @@ jobs:
           MESSAGING_ID: ${{ secrets.MESSAGING_ID }}
           APP_ID: ${{ secrets.APP_ID }}
           REACT_APP_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          SECRET_SANTA_WEBHOOK_URL_DEV: ${{ secrets.SS_WEBHOOK_URL_DEV }}
+          SECRET_SANTA_WEBHOOK_URL: ${{ secrets.SS_WEBHOOK_URL }}
+
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
@@ -37,3 +40,5 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           REACT_APP_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          SECRET_SANTA_WEBHOOK_URL_DEV: ${{ secrets.SS_WEBHOOK_URL_DEV }}
+          SECRET_SANTA_WEBHOOK_URL: ${{ secrets.SS_WEBHOOK_URL }}
