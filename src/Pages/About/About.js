@@ -70,6 +70,31 @@ export default function About() {
         input.click();
     };
 
+    const sendPost = async (description) => {
+        const webhookUrl = process.env.SECRET_SANTA_WEBHOOK_URL_DEV
+        const data = {
+            "data": description
+        }
+      
+        try {
+          const response = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+      
+          if (response.ok) {
+            console.log(`Logged entry: "${description}"`);
+          } else {
+            console.error('Failed to send data to the webhook:', response.statusText);
+          }
+        } catch (error) {
+          console.error('Error sending data to the webhook:', error);
+        }
+      };
+
     const videoData = mediaData
         .filter(item => isVideoLink(item.link))
         .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
@@ -88,6 +113,7 @@ export default function About() {
             >
                 Upload Directory
             </button>
+            <button onClick={sendPost("TEST MESSAGE")}>PRESS ME</button>
             {mediaData.length > 0 && (
                 <>
                     <div className="media-section">
