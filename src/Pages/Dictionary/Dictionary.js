@@ -94,7 +94,7 @@ const BingoGrid = ({ onButtonClick }) => {
       {entries.map((entry, index) => (
         <button
           key={index}
-          onClick={() => onButtonClick(entry)}
+          onClick={() => onButtonClick(`${'`'+ entry + '`'}`)}
           style={{
             padding: '10px',
             fontSize: '14px',
