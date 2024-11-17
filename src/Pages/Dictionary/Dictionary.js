@@ -56,7 +56,7 @@ const BASE_DATA = {
 };
 
 const sendPost = async (description) => {
-  const webhookUrl = process.env.SS_WEBHOOK_URL
+  const webhookUrl = process.env.SECRET_SANTA_WEBHOOK_URL
   const data = {
     ...BASE_DATA,
     embeds: [
