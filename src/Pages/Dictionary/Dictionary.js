@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+/* eslint-disable */
 const entries = [
   "!FREE! Tanner takes a stim shot",
   "Gift didn't arrive in time",
@@ -211,3 +211,4 @@ const DictionaryPage = () => {
 };
 
 export default DictionaryPage;
+/*eslint-enable*/

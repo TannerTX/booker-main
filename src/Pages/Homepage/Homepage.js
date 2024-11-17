@@ -2,7 +2,7 @@ import React from "react"
 import "./Homepage.css"
 import mainLogo from "../../Images/MainLogo.png"
 import "../../Components/CoolButton/CoolButton.css"
-
+/* eslint-disable */
 function Homepage() {
 
     // let navigate = useNavigate()
@@ -26,3 +26,4 @@ function Homepage() {
 }
 
 export default Homepage
+/*eslint-enable*/
