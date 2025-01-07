@@ -20,7 +20,7 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar />
-      <Routes> 
+      {/* <Routes> 
         <Route index element={<Homepage />} />
         <Route path="/Reserve" element={<ReservePage />} />
         <Route path="/Gabe" element={<Gabe />} />
@@ -30,7 +30,7 @@ function App() {
         <Route path="/Discord" element={<About />} />
         <Route path="/Policy" element={<Policy />} />
         <Route path="/Dictionary" element={<Dictionary />} />
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
     </>
 
