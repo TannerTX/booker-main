@@ -129,14 +129,14 @@ const DictionaryPage = () => {
     if (accessCode === "00001") {
       sendPost(
         selectedEntry,
-        "https://discord.com/api/webhooks/1307587788337713253/QFwZcHDt1SiK4C3isAJ0NjDnT9XovF9WG73cma8gJ7k7kAnLPJ9MbEcI4t2DhbwczL6d"
+        "https://www.google.com"
       );
       setIsEntryModalVisible(false);
       setAccessCode("");
     } else if (accessCode === "0000") {
       sendPost(
         selectedEntry,
-        "https://discord.com/api/webhooks/1307593953872183296/-jUBUCt05Cl734Wm2tcmXSppMLFJCuMXIMnN4ebRuO1TZGcGIVxZ08lVkBVCcHPgchjT"
+        "https://www.google.com"
       );
       setIsEntryModalVisible(false);
       setAccessCode("");
