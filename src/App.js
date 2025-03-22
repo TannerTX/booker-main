@@ -31,7 +31,7 @@ function App() {
         <Route path="/Insert" element={<Insert />} />
         <Route path="/Discord" element={<About />} />
         <Route path="/Policy" element={<Policy />} />
-        <Route path="/Dictionary" element={<Dictionary />} />
+        {/* <Route path="/Dictionary" element={<Dictionary />} /> */}
       </Routes>
     </BrowserRouter>
   );

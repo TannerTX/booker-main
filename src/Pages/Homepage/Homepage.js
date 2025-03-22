@@ -19,14 +19,6 @@ function Homepage() {
         style={{ animationFillMode: "forwards" }}
       />
       <div className="ellipse"></div>
-
-      {/* Redux Counter Test */}
-      <div style={{ textAlign: "center", marginTop: "2rem" }}>
-        <h2>Redux Counter: {count}</h2>
-        <button onClick={() => dispatch(increment())}>+</button>
-        <button onClick={() => dispatch(decrement())}>-</button>
-      </div>
-
       <footer>
         <i>
           <a className="a-footer" href="https://github.com/TannerTX" target="_blank">

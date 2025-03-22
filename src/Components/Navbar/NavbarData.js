@@ -13,19 +13,19 @@ export const NavbarData = [
         path: "/Discord",
         icon: <Faicons.FaDiscord />
     }, 
-    {
-        title: "Add Listing",
-        path: "/Insert",
-        icon: <Aicons.AiOutlinePlusCircle />
-    },
-    {
-        title: "Job Listings",
-        path: "/Jobs",
-        icon: <Aicons.AiFillContainer />
-    },
-    {
-        title: "Dictionary",
-        path: "/Dictionary",
-        icon: <Faicons.FaBookDead />
-    }
+    // {
+    //     title: "Add Listing",
+    //     path: "/Insert",
+    //     icon: <Aicons.AiOutlinePlusCircle />
+    // },
+    // {
+    //     title: "Job Listings",
+    //     path: "/Jobs",
+    //     icon: <Aicons.AiFillContainer />
+    // },
+    // {
+    //     title: "Dictionary",
+    //     path: "/Dictionary",
+    //     icon: <Faicons.FaBookDead />
+    // }
 ]
