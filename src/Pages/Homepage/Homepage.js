@@ -2,12 +2,9 @@ import React from "react";
 import "./Homepage.css";
 import mainLogo from "../../Images/MainLogo.png";
 import "../../Components/CoolButton/CoolButton.css";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../../store/sampleSlice"; // Make sure path is correct
+import packageJson from '../../../package.json'
 
 function Homepage() {
-  const count = useSelector((state) => state.sample.value);
-  const dispatch = useDispatch();
 
   return (
     <div className="MainContainer">
@@ -21,11 +18,12 @@ function Homepage() {
       <div className="ellipse"></div>
       <footer>
         <i>
-          <a className="a-footer" href="https://github.com/TannerTX" target="_blank">
+          <a className="a-footer" href="https://github.com/TannerTX" target="_blank" rel="noreferrer">
             @TannerTX
           </a>
         </i>
       </footer>
+      <footer><p className="version"><b>V{packageJson.version}</b></p></footer>
     </div>
   );
 }
