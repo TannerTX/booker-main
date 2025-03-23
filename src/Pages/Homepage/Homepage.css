@@ -143,3 +143,9 @@ footer {
     width: 20vw;
     height: 90vh;
   }
+  
+  .version {
+    color: #262c2e97;
+    position: relative;
+    margin-top: 400px;
+  }
